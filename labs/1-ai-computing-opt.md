@@ -232,6 +232,8 @@ You are provided with a starter code package containing:
 
 To download the starter code:
 
+Download the [Lab 1 starter archive](../assets/downloads/lab1.zip), or use the terminal commands below:
+
 1. Log in to your Raspberry Pi, either over SSH or a tunnel, and open a terminal.
 2. Download and extract the starter archive, then move into the `lab1/` directory by running the commands below in the terminal:
 
