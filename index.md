@@ -3,6 +3,11 @@ title: "Efficient Computing for AI"
 subtitle: "LAB Material and Assignments"
 ---
 
+## 29 October 2026
+
+- **docs: fix vector add benchmark command**
+  - [labs/1-ai-computing-opt.md](labs/1-ai-computing-opt.md)
+
 ## 14 October 2026
 
 - **docs: update lab room**
