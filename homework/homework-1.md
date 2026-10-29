@@ -265,15 +265,6 @@ Download the [LaTeX report template](hw1/HW1_GroupN.tex). Rename it to
 `HW1_GroupN.tex`, replacing `N` with your group number, and fill in all
 requested sections. Compile the completed template to `HW1_GroupN.pdf`.
 
-The report must include the fixed case and reproducibility information;
-correctness results; MAC/FLOP and storage calculations; load/store counts with
-units; modeled traffic and OI; and measured latency, variability, and speedups
-for every required kernel configuration. Include both raw benchmark CSV files,
-the generated summary and plots, and a discussion comparing theoretical MAC
-savings with measured performance. Only include correctness-passing kernels
-in speedup calculations. Do not describe analytical OI as measured memory
-traffic.
-
 # Deliverables
 
 Submit a zip file named `HW1_GroupN.zip` (replace `N` with your group number,
@@ -290,6 +281,4 @@ for example `HW1_Group1.zip`) containing:
 
 The four kernel scores total exactly **6.0 points**. Points for a kernel are
 awarded only when its implementation passes the required correctness tests and
-the corresponding report section is complete in the submitted PDF. A fast
-kernel is not required for full credit; correct implementations, sound
-accounting, and reproducible measurements are assessed.
+the corresponding report section is complete in the submitted PDF.
