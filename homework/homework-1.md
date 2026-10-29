@@ -261,7 +261,7 @@ or compare latency for a `TODO` or failed kernel.
 
 # Report
 
-Download the [LaTeX report template](hw1/HW1_GroupN.tex). Rename it to
+Download the [LaTeX report template](https://raw.githubusercontent.com/ValentinoPeluso/ECAI27/main/assets/downloads/HW1_GroupN.tex). Rename it to
 `HW1_GroupN.tex`, replacing `N` with your group number, and fill in all
 requested sections. Compile the completed template to `HW1_GroupN.pdf`.
 
