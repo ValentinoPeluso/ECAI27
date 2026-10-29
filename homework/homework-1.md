@@ -197,10 +197,10 @@ the supplied function interfaces and sparse representation unchanged.
 
 # Starter files
 
-Download the starter archive
+Download the [starter archive](https://raw.githubusercontent.com/ValentinoPeluso/ECAI27/main/assets/downloads/hw1.zip).
 
 ```bash
-wget https://github.com/ValentinoPeluso/ECAI27/blob/main/assets/downloads/hw1.zip
+wget https://raw.githubusercontent.com/ValentinoPeluso/ECAI27/main/assets/downloads/hw1.zip
 unzip hw1.zip
 cd hw1
 code .
