@@ -13,6 +13,8 @@ website:
         text: Setup
       - href: labs/index.md
         text: Labs
+      - href: homework/index.md
+        text: Homework
       - href: resources/index.md
         text: Resources
     right:
@@ -35,6 +37,11 @@ website:
           - labs/overview.md
           - labs/schedule.md
           - labs/1-ai-computing-opt.md
+
+      - href: homework/index.md
+        text: Homework
+        contents:
+          - homework/homework-1.md
 
       - href: resources/index.md
         text: Resources
