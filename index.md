@@ -5,6 +5,9 @@ subtitle: "LAB Material and Assignments"
 
 ## 29 October 2026
 
+- **docs: add sparse GEMM homework**
+  - [homework/homework-1.md](homework/homework-1.md)
+  - [homework/index.md](homework/index.md)
 - **docs: fix vector add benchmark command**
   - [labs/1-ai-computing-opt.md](labs/1-ai-computing-opt.md)
 
