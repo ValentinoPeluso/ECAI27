@@ -200,7 +200,7 @@ the supplied function interfaces and sparse representation unchanged.
 Download the starter archive
 
 ```bash
-wget https://valentinopeluso.github.io/ECAI27/assets/downloads/hw1.zip
+wget https://github.com/ValentinoPeluso/ECAI27/blob/main/assets/downloads/hw1.zip
 unzip hw1.zip
 cd hw1
 code .
@@ -222,8 +222,6 @@ The package provides:
   passing tests or valid measurements.
 - `include/sparse_gemm.h` and `Makefile`: kernel interfaces and build targets.
   Keep the supplied function interfaces unchanged.
-- `scripts/analyze.py`: creates summary data and figures from benchmark CSV
-  files using Python's standard library.
 - `HW1_GroupN.tex`: fillable report template. Rename it using your group
   number before filling it in.
 
