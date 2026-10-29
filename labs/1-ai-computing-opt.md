@@ -319,7 +319,7 @@ For vector addition, change `n` in `src/vector_add/benchmark.c` with values of  
 ```bash
 # Edit n in src/vector_add/benchmark.c, then:
 make vector_add
-srcvector-add/benchmark
+./src/vector-add/benchmark
 ```
 
 Collect the reported results (e.g., in a CSV file or a Sheet) for later comparisons.
@@ -388,7 +388,7 @@ Then run the benchmarking with:
 
 ```bash
 make vector_add
-srcvector-add/benchmark
+./src/vector-add/benchmark
 ```
 
 Collect the benchmarking results in the table below:
