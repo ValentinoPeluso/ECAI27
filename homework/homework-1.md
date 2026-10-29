@@ -652,79 +652,6 @@ The computation follows these steps:
 
 The optimized kernel must preserve this computation while improving data reuse, SIMD utilization, or parallel execution. The provided sparse weights and their corresponding dense representation must be used without repacking or changing the sparsity pattern.
 
-
-## 4. Why block sparsity can improve performance
-
-A dense GEMM implementation processes every element of \(W\), including its zeros. A block-sparse implementation skips missing blocks entirely.
-
-For each retained 4×4 block, the algorithm performs sixteen multiplications and sixteen accumulation updates per input row. A missing block requires no weight loads and no corresponding multiply-accumulate operations.
-
-### Example: A compact BCC layout
-
-Consider a \(W\) matrix of size \(8\times 8\), partitioned into four \(4\times4\) blocks:
-
-\[
-W=
-\begin{bmatrix}
-W_{00} & W_{01}\\
-W_{10} & W_{11}
-\end{bmatrix}.
-\]
-
-Suppose only three blocks are retained: \(W_{00}\), \(W_{10}\), and \(W_{11}\). The missing block \(W_{01}\) is treated as sixteen zeros.
-
-<text> </text>
-
-The block structure is:
-
-\[
-W=
-\begin{bmatrix}
-\boxed{W_{00}} & \boxed{0}\\
-\boxed{W_{10}} & \boxed{W_{11}}
-\end{bmatrix}.
-\]
-
-The BCC representation stores the blocks grouped by output-column group:
-
-| Array | Contents | Meaning |
-|---|---|---|
-| `block_col_ptr` | `[0, 2, 3]` | Group 0 contains blocks at positions 0–1; group 1 contains the block at position 2. |
-| `block_row_idx` | `[0, 1, 1]` | The stored blocks belong to block rows 0, 1, and 1, respectively. |
-| `block_values` | `B00, B10, B11` | The three blocks, each stored as 16 consecutive FP32 values in row-major order. |
-
-Here, `B00`, `B10`, and `B11` denote the sixteen-element sequences representing the corresponding blocks; they are labels for illustration, not literal array entries.
-
-For example, the first block is stored as
-
-\[
-\begin{bmatrix}
-w_{00} & w_{01} & w_{02} & w_{03}\\
-w_{10} & w_{11} & w_{12} & w_{13}\\
-w_{20} & w_{21} & w_{22} & w_{23}\\
-w_{30} & w_{31} & w_{32} & w_{33}
-\end{bmatrix}
-\longrightarrow
-[w_{00},w_{01},w_{02},w_{03},\ldots,w_{33}].
-\]
-
-The values are flattened row by row.
-
-**How to interpret the arrays:** `block_col_ptr` determines which blocks belong to an output-column group, while `block_row_idx` determines which four rows of \(W\), and therefore which four elements of an input row of \(A\), are used for each block.
-
-For instance, for output-column group 1, the range is
-
-\[
-p=\texttt{block\_col\_ptr}[1]
-\;\text{to}\;
-\texttt{block\_col\_ptr}[2]-1
-=2\;\text{to}\;2.
-\]
-
-Thus, the group contains only block \(W_{11}\), whose block-row index is 1. The kernel uses input elements \(A_{i,4},\ldots,A_{i,7}\) to update output elements \(C_{i,4},\ldots,C_{i,7}\). The missing block \(W_{01}\) is never loaded or processed.
-
-In general, `block_col_ptr` has one more entry than the number of output-column groups. Its final entry equals `nnzb`, the total number of retained blocks.
-
 # Test case
 
 Consider only one fixed test case with:
@@ -733,7 +660,6 @@ $$
 M=128,\qquad K=N=512,\qquad nnzb=4096.
 $$
 
-and 75% of zero blocks. 
 
 # Goal
 
