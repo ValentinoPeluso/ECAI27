@@ -345,7 +345,7 @@ Our example has two output-column groups and three stored blocks. Therefore,
 block_col_ptr = {0, 2, 3};
 ```
 
-The three entries are offsets into the compressed block list, not indices of the original matrix columns.
+The three entries are offsets into the compressed block list:
 
 ```text
 Compressed block list
@@ -407,11 +407,11 @@ The array `block_row_idx` tells the kernel which block row of $W$ each stored bl
 block_row_idx = {0, 1, 1};
 ```
 
-| Stored position `p` | `block_row_idx[p]` | Block | Rows of \(W\) |
+| Stored position `p` | `block_row_idx[p]` | Block | Rows of $W$ |
 |---:|---:|---|---|
-| 0 | 0 | \(B_{00}\) | 0–3 |
-| 1 | 1 | \(B_{10}\) | 4–7 |
-| 2 | 1 | \(B_{11}\) | 4–7 |
+| 0 | 0 | $B_{00}$ | 0–3 |
+| 1 | 1 | $B_{10}$ | 4–7 |
+| 2 | 1 | $B_{11}$ | 4–7 |
 
 The block-row index is a zero-based index. Each increment corresponds to four rows of the original matrix.
 
@@ -503,8 +503,7 @@ for (size_t i = 0; i < m; ++i)
     for (size_t g = 0; g < w->n / 4; ++g) {
         float acc[4] = {0.0f, 0.0f, 0.0f, 0.0f};
 
-        for (size_t p = w->block_col_ptr[g];
-             p < w->block_col_ptr[g + 1]; ++p) {
+        for (size_t p = w->block_col_ptr[g]; p < w->block_col_ptr[g + 1]; ++p) {
             size_t k0 = 4 * (size_t)w->block_row_idx[p];
 
             for (size_t r = 0; r < 4; ++r) {
@@ -583,8 +582,7 @@ c[i * w->n + 4 * g + col] = acc[col];
 The central statement is
 
 ```c
-acc[col] += av *
-    w->block_values[16 * p + 4 * r + col];
+acc[col] += av * w->block_values[16 * p + 4 * r + col];
 ```
 
 It multiplies one input value by a weight and adds the product to the corresponding output accumulator.
@@ -630,6 +628,8 @@ $$
 $$
 
 This is just one contribution. The kernel repeats the operation for every local row and every stored block in the group, accumulating all contributions before writing the four output values.
+
+![Execution trace of the 4×4 block-sparse GEMM kernel.](../assets/images/sparse_gemm_trace.gif){fig-align="center" width="100%"}
 
 ## 6. Summary
 
