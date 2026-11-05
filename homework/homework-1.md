@@ -759,8 +759,6 @@ for example `HW1_Group1.zip`) containing:
   (1.5 points).
 - `sparse_openmp.c` — your completed OpenMP kernel (1.5 points).
 - `sparse_openmp_tiled_neon.c` — your completed combined kernel (2.0 points).
-- The raw benchmark CSV files from both runs and the generated analysis summary
-  and plots.
 
 The four kernel scores total exactly **6.0 points**. Points for a kernel are
 awarded only when its implementation passes the required correctness tests and
