@@ -3,6 +3,11 @@ title: "Efficient Computing for AI"
 subtitle: "LAB Material and Assignments"
 ---
 
+## 5 November 2026
+
+- **docs: clarify homework submission files**
+  - [homework/homework-1.md](homework/homework-1.md)
+
 ## 29 October 2026
 
 - **docs: add sparse GEMM homework**

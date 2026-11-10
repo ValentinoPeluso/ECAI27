@@ -37,6 +37,7 @@ website:
           - labs/overview.md
           - labs/schedule.md
           - labs/1-ai-computing-opt.md
+          - labs/2-data-collection-storage.md
 
       - href: homework/index.md
         text: Homework

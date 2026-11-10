@@ -13,3 +13,7 @@ title: "Labs"
 ## 1. AI Computing Optimization
 
 [Open the lab](1-ai-computing-opt.md).
+
+## 2. Data Collection & Storage
+
+[Open the lab](2-data-collection-storage.md).
