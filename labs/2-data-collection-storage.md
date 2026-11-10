@@ -21,16 +21,17 @@ With the RPI detached from the power supply, connect the DHT-11 sensor to the RP
 - Connect the DATA (out) pin of the DHT-11 to the GPIO 4 pin of the RPI (pin 7).
 - Connect the GND (-) pin of the DHT-11 to the Ground pin of the RPI (pin 6).
 
-![DHT-11 connections to the Raspberry Pi GPIO pins.](../assets/images/pinout.png)
+![](../assets/images/pinout.png)
 
 :::{.callout-warning}
 Wrong connections will damage the sensor! Check the pinout before connecting the RPI to the power supply.
 :::
 
 **Fried sensors from past years:**
-![DHT-11 sensors damaged by incorrect connections.](../assets/images/fried.png){width=50%}
 
-After checking the connections, connect the RPI to the power supply.
+![](../assets/images/fried.png){width=25%}
+
+- After double-checking the connections, connect the RPI to the power supply.
 
 ### Cloud setup: Redis Cloud
 
@@ -38,25 +39,25 @@ Create a Redis Cloud database to store the sensor readings:
 
 1. Go to [redis.io/try-free](https://redis.io/try-free) and sign in using your preferred method.
 
-   ![Redis Cloud sign-in page.](../assets/images/redis-setup-26.png){width=75%}
+   ![](../assets/images/redis-setup-26.png){width=75%}
 
 2. Click **New database**, choose the **Free** plan, select **Europe (Frankfurt)** as the region, and click **Create database**.
 
-   ![Create a Redis Cloud database.](../assets/images/redis-setup-27.png){width=75%}
+   ![](../assets/images/redis-setup-27.png){width=75%}
 
-   ![Select the Free plan.](../assets/images/redis-setup-28.png){width=75%}
+   ![](../assets/images/redis-setup-28.png){width=75%}
 
-   ![Select the Europe (Frankfurt) region and create the database.](../assets/images/redis-setup-29.png){width=75%}
+   ![](../assets/images/redis-setup-29.png){width=75%}
 
 3. After the database is created, find the **Public Endpoint** under **General**. It contains the host and port separated by a colon; save both values for the Python client.
 
-   ![Find the Redis database public endpoint.](../assets/images/redis-setup-30.png){width=75%}
+   ![](../assets/images/redis-setup-30.png){width=75%}
 
 4. Expand **Security** and copy the default user's password. The username is `default`.
 
-   ![Open the Redis database Security section.](../assets/images/redis-setup-31.png){width=75%}
+   ![](../assets/images/redis-setup-31.png){width=75%}
 
-   ![Copy the default user's password.](../assets/images/redis-setup-32.png){width=75%}
+   ![](../assets/images/redis-setup-32.png){width=75%}
 
 Keep the database host, port, and password available for the next exercises.
 
@@ -236,5 +237,6 @@ Traffic from Raspberry Pi to Redis is blocked on the eduroam Wi-Fi network. To s
 Create a Deepnote notebook that:
 
 1. Connects to your Redis database.
-2. Retrieves the time-series temperature and humidity readings collected by your Raspberry Pi. Note that Deepnote has a different time zone than ours.
+2. Retrieves the time-series temperature and humidity readings collected by your Raspberry Pi. 
+    - Note: Deepnote has a different time zone than ours.
 3. Visualizes the readings using a line chart, with temperature and humidity on the y-axis and time on the x-axis.
