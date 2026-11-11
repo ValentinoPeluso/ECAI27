@@ -3,11 +3,17 @@ title: "Efficient Computing for AI"
 subtitle: "LAB Material and Assignments"
 ---
 
+## 11 November 2026
+
+- **docs: add lab 3 ASR materials**
+  - [labs/3-asr.md](labs/3-asr.md)
+  - [labs/index.md](labs/index.md)
+
 ## 10 November 2026
 
-  - **docs: add data collection lab materials**
-    - [labs/2-data-collection-storage.md](labs/2-data-collection-storage.md)
-    - [labs/index.md](labs/index.md)
+- **docs: add data collection lab materials**
+  - [labs/2-data-collection-storage.md](labs/2-data-collection-storage.md)
+  - [labs/index.md](labs/index.md)
 
 ## 5 November 2026
 
