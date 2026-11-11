@@ -5,10 +5,9 @@ subtitle: "LAB Material and Assignments"
 
 ## 10 November 2026
 
-- **docs: add data collection lab materials**
-  - [labs/2-data-collection-storage.md](labs/2-data-collection-storage.md)
-  - [labs/3-ai-based-vui.md](labs/3-ai-based-vui.md)
-  - [labs/index.md](labs/index.md)
+  - **docs: add data collection lab materials**
+    - [labs/2-data-collection-storage.md](labs/2-data-collection-storage.md)
+    - [labs/index.md](labs/index.md)
 
 ## 5 November 2026
 

@@ -1,5 +1,9 @@
 project:
   type: website
+  render:
+    - "**/*.md"
+  resources:
+    - "assets/downloads/Lab2 - Cloud Inference Server.ipynb"
 
 website:
   title: "Efficient Computing for AI"
@@ -38,6 +42,7 @@ website:
           - labs/schedule.md
           - labs/1-ai-computing-opt.md
           - labs/2-data-collection-storage.md
+          - labs/3-asr.md
 
       - href: homework/index.md
         text: Homework
