@@ -3,6 +3,12 @@ title: "Efficient Computing for AI"
 subtitle: "LAB Material and Assignments"
 ---
 
+## 19 November 2026
+
+- **docs: add intent classification lab**
+  - [labs/4-training.md](labs/4-training.md)
+  - [labs/index.md](labs/index.md)
+
 ## 11 November 2026
 
 - **docs: add lab 3 ASR materials**
