@@ -43,6 +43,7 @@ website:
           - labs/1-ai-computing-opt.md
           - labs/2-data-collection-storage.md
           - labs/3-asr.md
+          - labs/4-training.md
 
       - href: homework/index.md
         text: Homework

@@ -21,3 +21,7 @@ title: "Labs"
 ## 3. AI-based Voice User Interface: Audio Speech Recognition
 
 [Open the lab](3-asr.md).
+
+## 4. Intent Classification
+
+[Open the lab](4-training.md).
