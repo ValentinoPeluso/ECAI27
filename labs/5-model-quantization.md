@@ -12,13 +12,11 @@ Review `ECAI_05-Part-II_Optimization_II`, slides 154–195 before starting the e
 
 ## Post-Training Quantization
 
-Go to (`5.1 - Model Quantization.ipynb`)[https://deepnote.com/workspace/ECAI-27-e30878e0-87e9-4b7c-b044-c52c3f4dd72f/project/Material-3880e510-b64c-4bb5-b488-c2122d5d9e2d/notebook/51-Model-Quantization-9c11feaf3edc483f802171abb822de64?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=notebook&utm_content=3880e510-b64c-4bb5-b488-c2122d5d9e2d] and quantize the model using the different strategies provided by ONNX Runtime. Measure the test accuracy for each quantized variant.
+Go to [5.1 - Model Quantization.ipynb](https://deepnote.com/workspace/ECAI-27-e30878e0-87e9-4b7c-b044-c52c3f4dd72f/project/Material-3880e510-b64c-4bb5-b488-c2122d5d9e2d/notebook/51-Model-Quantization-9c11feaf3edc483f802171abb822de64?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=notebook&utm_content=3880e510-b64c-4bb5-b488-c2122d5d9e2d) and quantize the model using the different strategies provided by ONNX Runtime. Measure the test accuracy for each quantized variant.
 
 See also: https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html
 
 ## RPI profiling
-Reuse `test_accuracy` on the same test set for all four models. Measure total model storage in bytes, including any external tensor files. For latency, reuse one warmed-up CPU session per model, time repeated `session.run` calls on the same pre-tokenized batch-size-one inputs, and report the median in milliseconds. Keep the machine, provider, and thread settings fixed. Exclude session creation and tokenization from the timed region.
-
 Download [profile_onnx_runtime.py](../assets/downloads/profile_onnx_runtime.py) to the Raspberry Pi. Copy the ONNX models and `tokenizer.json` and `labels.json` into `results/` beside the script.
 
 From the directory containing the script, profile all models, e.g.:
