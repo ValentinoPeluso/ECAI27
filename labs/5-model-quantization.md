@@ -6,7 +6,7 @@ title: "5. Model Quantization"
 
 In this lab, you will apply three post-training quantization (PTQ) strategies to the Intent Classification FP32 ONNX model and compare their accuracy, storage size, RAM requirementes, and CPU inference latency.
 
-Review `ECAI_05-Part-II_Optimization_II`, slides 154–195 before starting the exercises.
+Review `ECAI_05-Part-II_Optimization_II`, slides 132–195 before starting the exercises.
 
 ## From the lecture to the notebook
 
