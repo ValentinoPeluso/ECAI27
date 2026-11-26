@@ -3,6 +3,12 @@ title: "Efficient Computing for AI"
 subtitle: "LAB Material and Assignments"
 ---
 
+## 26 November 2026
+
+- **docs: add model quantization lab**
+  - [labs/5-model-quantization.md](labs/5-model-quantization.md)
+  - [labs/index.md](labs/index.md)
+
 ## 19 November 2026
 
 - **docs: add intent classification lab**
