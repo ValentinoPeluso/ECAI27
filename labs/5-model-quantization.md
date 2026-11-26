@@ -33,5 +33,3 @@ python3 profile_onnx_runtime.py "Start sending measurements to cloud storage." \
 | Dynamic 8-bit | | | | | |
 | Dynamic 8-bit (reduce range) | | | | | |
 | Static INT8 | | | | | |
-
-For RAM, record the trace maximum reported as `ORT CPU arena held`, or enter `N/A` if unavailable. This measures memory held by ONNX Runtime's CPU allocator, not total process RAM.
