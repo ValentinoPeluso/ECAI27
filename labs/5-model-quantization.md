@@ -8,10 +8,6 @@ In this lab, you will apply three post-training quantization (PTQ) strategies to
 
 Review `ECAI_05-Part-II_Optimization_II`, slides 154–195 before starting the exercises.
 
-
-- Use a Python notebook environment with NumPy, ONNX, ONNX Runtime (CPU build with the notebook's 4-bit quantizer API and kernel support), PyTorch, Transformers, and Tokenizers. No GPU is needed. The tokenizer needs network access on first use unless already cached.
-- Open **** — notebook link to be added. Set the notebook’s working directory so `test.jsonl` and `results/intent_classifier.onnx` resolve. Add `import json` to the imports before loading the dataset.
-
 ## From the lecture to the notebook
 
 ## Post-Training Quantization
