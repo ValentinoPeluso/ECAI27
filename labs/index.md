@@ -25,3 +25,7 @@ title: "Labs"
 ## 4. Intent Classification
 
 [Open the lab](4-training.md).
+
+## 5. Model Quantization
+
+[Open the lab](5-model-quantization.md).

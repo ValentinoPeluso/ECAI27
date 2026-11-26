@@ -4,6 +4,7 @@ project:
     - "**/*.md"
   resources:
     - "assets/downloads/Lab2 - Cloud Inference Server.ipynb"
+    - "assets/downloads/profile_onnx_runtime.py"
 
 website:
   title: "Efficient Computing for AI"
@@ -44,6 +45,7 @@ website:
           - labs/2-data-collection-storage.md
           - labs/3-asr.md
           - labs/4-training.md
+          - labs/5-model-quantization.md
 
       - href: homework/index.md
         text: Homework
